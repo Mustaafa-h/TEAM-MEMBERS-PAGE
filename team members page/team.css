@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: sans-serif;
+}
+
+.teamsection a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.teamsection{
+    padding: 10rem 0;
+    background-color: #fff;
+}
+
+.team-header{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+    margin-bottom: 5rem;
+    text-align: center;
+    color: #333;
+    position: relative;
+}
+
+.team-header::after{
+    content: "";
+    width: 10rem;
+    height: 0.8rem;
+    background-color: tomato;
+    position: absolute;
+    bottom: -2rem;
+    left : 50%;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+
+}
+
+.teamsection .cardwrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.singlecard{
+    width: 32rem;
+    background-color: #ebeef8;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem 0;
+    box-shadow: .5rem .5rem .3rem rgba(0,0,0,.2);
+    transition: .3s ease;
+}
+
+.singlecard .singlecardimg{
+    width: 100%;
+    height: 26rem;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
+
+}
+
+.singlecard .prof-img{
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 999;
+    margin-top: -11rem;
+    border: .5rem solid tomato;
+}
+
+.singlecard h1{
+    font-size: 2.5rem;
+    color: #333;
+    margin: 1.5rem 0;
+}
+
+.singlecard .jobtitle{
+    color: #777;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.singlecard .cardabout{
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #333;
+    text-align: center;
+}
+
+.singlecard .btn{
+    padding: 1rem 2.5rem;
+    background-color: tomato;
+    color: #eee;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    margin: 1rem 0;
+    transition: all .5s;
+}
+
+.singlecard .btn:hover{
+    transform: translateY(-2px);
+    box-shadow: .5rem .5rem 2rem rgba(0,0,0,.2);
+}
+
+.singlecard .btn:active{
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.singlecard .teamsocial{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(61, 60, 60, 0.1);
+}
+
+.singlecard .teamsocial i{
+    font-size: 3rem;
+    transition: color .5s;
+
+}
+
+.fa-facebook-square{
+    color: rgb(93, 93, 186);
+}
+.fa-twitter-square{
+    color: rgb(109, 168, 180);
+}
+.fa-whatsapp-square{
+    color: rgb(48, 126, 48);
+}
+.fa-instagram-square{
+    color: tomato;
+}
+
+.fa-instagram-square:hover,
+.fa-whatsapp-square:hover,
+.fa-twitter-square:hover,
+.fa-facebook-square:hover{
+    color: tomato;
+}
+
+@media  screen and (min-width:700px) {
+    .teamsection .cardwrapper 
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .singlecard{
+        margin: 2rem;
+        transition: transform .5s;
+    }
+
+    @keyframes fadein {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+    .singlecard:nth-child(1){
+         animation: fadein .5s .5s backwards ;
+    }
+    .singlecard:nth-child(2){
+        animation: fadein .5s 1s backwards ;
+   }
+   .singlecard:nth-child(3){
+    animation: fadein .5s 1.5s backwards ;
+   }
+   .singlecard:nth-child(4){
+    animation: fadein .5s 2s backwards ;
+   }
+
+   .singlecard:hover{
+    transform: scale(1.02);
+   }
+
+}
